@@ -1,0 +1,4 @@
+We retrieved a file that requires a password to enter the hidden secrets of UniPD.
+Can you overcome the password requested and get the flag?
+
+Please explain your procedure (using strings and any other method with the flag in clear is not allowed)

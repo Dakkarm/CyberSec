@@ -1,0 +1,4 @@
+Can you guess the password to get the flag?
+
+YOU CANNOT PATCH THIS FILE!
+Plain good old rev eng

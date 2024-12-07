@@ -1,0 +1,12 @@
+The flag is "spritz{dont_drink_too_much}"
+
+I passaggi sono stati i seguenti:
+
+- ho aperto IDA per analizzare il codice di spriss_pass
+- noto che viene richiesta in input una password
+- la password inserita e' controllata lettera per lettera ma non in ordine sequenziale
+- le lettere controllate sono le seguenti : po314r
+- ricostruendo l'ordine ispezionando ida tramite pseudocodice ottengo che la password e' 4p3rol 
+(viene dunque prima controllata la terza lettere p che sarebbe la seconda della parola v[1])
+- inserita la password eseguendo il programma ottengo la flag riportata 
+in precedenza
