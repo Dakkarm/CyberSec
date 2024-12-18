@@ -19,6 +19,7 @@ Pt.2
 - [pwntools tutorial] https://github.com/Gallopsled/pwntools-tutorial
 - [PTL & GOT] https://www.technovelty.org/linux/plt-and-got-the-key-to-code-sharing-and-dynamic-libraries.html
 - [ROP] https://github.com/JonathanSalwan/ROPgadget
+- [HOW to find gadgets using rax] ROPgadget --binary ./a.out | grep “rax”
 
 Useful gdb-peda commands:
 pattern_create size [file]
