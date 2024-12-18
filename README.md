@@ -17,7 +17,7 @@ Pt.2
 - [Peda] https://github.com/longld/peda
 - [pwntools] https://docs.pwntools.com/en/stable/
 - [pwntools tutorial] https://github.com/Gallopsled/pwntools-tutorial
-
+- [ROP] https://github.com/JonathanSalwan/ROPgadget
 
 Useful gdb-peda commands:
 pattern_create size [file]
