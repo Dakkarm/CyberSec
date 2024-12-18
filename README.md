@@ -17,6 +17,7 @@ Pt.2
 - [Peda] https://github.com/longld/peda
 - [pwntools] https://docs.pwntools.com/en/stable/
 - [pwntools tutorial] https://github.com/Gallopsled/pwntools-tutorial
+- [PTL & GOT] https://www.technovelty.org/linux/plt-and-got-the-key-to-code-sharing-and-dynamic-libraries.html
 - [ROP] https://github.com/JonathanSalwan/ROPgadget
 
 Useful gdb-peda commands:
