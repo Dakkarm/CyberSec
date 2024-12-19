@@ -11,7 +11,7 @@ SQL INJECTION: ' or 1=1--
 Pt.2
 
 
-gcc file.c -o file_senza_c
+gcc file.c -o file_senza_c     /////       chmod +x file_senza_c
 
 - [Jumps Codes] http://www.unixwiz.net/techtips/x86-jumps.html
 - http://ref.x86asm.net/coder64.html
