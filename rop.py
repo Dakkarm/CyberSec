@@ -1,4 +1,4 @@
-######## example file: 3_write4 ########
+######## example file: 3_write4 ########   //simile a 1_split 
 
 
 #instructions:
