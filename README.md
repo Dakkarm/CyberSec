@@ -25,7 +25,7 @@ gcc file.c -o file_senza_c     /////       chmod +x file_senza_c
 - [Other ROP tools] - https://docs.pwntools.com/en/stable/rop/rop.html
                     - https://scoding.de/ropper/
   
-comando per continuare a digitare su terminale dopo gdb)       p.interactive()
+comando per continuare a digitare su terminale dopo gdb    ->     p.interactive()
 
 
 Useful gdb-peda commands:
