@@ -1,3 +1,5 @@
+-------------------------------------------------------------------------------------------------------------
+
 ######## example file: 3_write4 ########
 
 #instructions:
@@ -51,7 +53,7 @@ e = process('write4')
 e.sendline(rop)
 e.interactive()
 
-
+-------------------------------------------------------------------------------------------------------------
 
 ######## example file: 1_GOT ########
 
@@ -78,7 +80,7 @@ io.sendlineafter('\n', winAddr)
 
 io.interactive()
 
-
+-------------------------------------------------------------------------------------------------------------
              
 ######## example file: 1_enc_pwn1 ########
 
@@ -113,7 +115,7 @@ msgin = garbage.encode('ascii') + address
 p.sendline(msgin)
 p.interactive()
 
-
+-------------------------------------------------------------------------------------------------------------
 
 ######## example file: 1_split ########
 
@@ -131,7 +133,6 @@ p.interactive()
 #pattern_search
 #guarda nome errore e segnati offset  // es: EIP (è collegato a PC a quanto pare) e ha offset 140     
 #-----------------------------------------
-
 
 #radare2 ./nome_file
 #aaaa
@@ -176,3 +177,33 @@ payload += print_flag
 payload += system
 io.sendline(payload)
 io.interactive()
+
+-------------------------------------------------------------------------------------------------------------
+
+######## example file: 3_java ########
+
+#gdb 
+
+#file nome_file #letteralmente file
+#ti chiede debugger y/n e gli metti Y
+#disas bash
+
+#cerco jne (istruzione IF)
+#e vogliamo andare all'istruzione successiva: mov con locazione di memoria: “0x00000000004007a2”. 
+
+#-- da qua non abbiamo più continuato--
+
+-------------------------------------------------------------------------------------------------------------
+
+######## example file: funmail2.0 ########
+
+#gdb
+
+#file nome_file #letteralmente file
+#ti chiede debugger y/n e gli metti Y
+#break main
+#run
+
+#jump nome_funzione // nel nostro caso sia showEmails che printFlag andavano bene
+
+-------------------------------------------------------------------------------------------------------------
