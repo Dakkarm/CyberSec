@@ -9,10 +9,6 @@ SQL INJECTION: ' or 1=1--
 
 
 Pt.2
-
-
-gcc file.c -o file_senza_c     /////       chmod +x file_senza_c
-
 - [Jumps Codes] http://www.unixwiz.net/techtips/x86-jumps.html
 - http://ref.x86asm.net/coder64.html
 - https://man7.org/linux/man-pages/man2/ptrace.2.html
@@ -25,9 +21,11 @@ gcc file.c -o file_senza_c     /////       chmod +x file_senza_c
 - [Other ROP tools] - https://docs.pwntools.com/en/stable/rop/rop.html
                     - https://scoding.de/ropper/
   
-comando per continuare a digitare su terminale dopo gdb    ->     p.interactive()
+
+gcc file.c -o file_senza_c     /////       chmod +x file_senza_c
+comando per continuare a digitare su terminale dopo gdb    ->     p.interactive() // da usare solo su python
 
 
 Useful gdb-peda commands:
-- pattern_create size [file]
+- pattern_create [size] [file]
 - pattern_search
