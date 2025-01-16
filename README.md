@@ -34,3 +34,5 @@ GDB Guide
 - https://youtu.be/HtNKhBWBvts?si=Cq4RvojowaZE4tJ7
 
 - https://youtu.be/Tmdnsre9z7s?si=U1CLaNJ35TxtuIIu
+
+- https://youtu.be/X5JHPtd1IJQ?si=wQ1PIwZDGBwnzUVr
