@@ -31,4 +31,6 @@ Useful gdb-peda commands:
 - pattern_search
 
 GDB Guide
-https://youtu.be/HtNKhBWBvts?si=Cq4RvojowaZE4tJ7
+- https://youtu.be/HtNKhBWBvts?si=Cq4RvojowaZE4tJ7
+
+- https://youtu.be/Tmdnsre9z7s?si=U1CLaNJ35TxtuIIu
