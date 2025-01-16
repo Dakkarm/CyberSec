@@ -13,6 +13,10 @@ pdf @nome_funzione   o   s nome_funzione 	[MOSTA nome_funzione]
 
 V 	[VISUAL APPESENTATION OF THE BINAY]
 
+
+_____________________________
+
+checksec 
 ______________________________
 
 Se trovi segmentation fault: (fgets, in quanto funzione vecchi)
