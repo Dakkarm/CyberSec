@@ -29,3 +29,6 @@ comando per continuare a digitare su terminale dopo gdb    ->     p.interactive(
 Useful gdb-peda commands:
 - pattern_create [size] [file]
 - pattern_search
+
+GDB Guide
+https://youtu.be/HtNKhBWBvts?si=Cq4RvojowaZE4tJ7
