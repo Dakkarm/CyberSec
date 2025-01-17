@@ -39,10 +39,12 @@ Useful gdb-peda commands:
 - pattern [size] [file]
 
 es:
+[
 - gdb-peda$ pattern create 100 input
 - :> Writing pattern of 100 chars to filename "input"
 - gdb-peda$ r < input
 - :> Starting program: /tmp/bof < input
+]
 
 - layout asm   [fa vedere l'interno della funzione in modo diverso   (si vede nome func + offset)]
 
